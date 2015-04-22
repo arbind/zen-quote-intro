@@ -11,6 +11,7 @@ function getQuote() {
 function loadApp() {
   $newQuoteButton = $('button.new-quote');
   $newQuoteButton.click(getQuote);
+  getQuote();
 }
 
 $(loadApp);
