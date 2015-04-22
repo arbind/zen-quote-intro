@@ -1,10 +1,11 @@
-function renderQuote(quote){
-  $('.quote').html(quote);
+var quoteEndpoint = "http://www.zen-quote.com" // Don't forget www. :)
+
+function renderQuote(data){
+  $('.quote').html(data.quote);
 }
 
 function getQuote() {
-  var quote = new Date();
-  renderQuote(quote);
+  $.get(quoteEndpoint, renderQuote);
 }
 
 function loadApp() {
